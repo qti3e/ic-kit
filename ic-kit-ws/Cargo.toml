@@ -1,0 +1,11 @@
+[package]
+name = "ic-kit-ws"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ic-kit-certified = {path="../ic-kit-certified"}
+ic-kit = {path="../ic-kit"}
+sha2 = "0.10.6"

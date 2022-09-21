@@ -13,6 +13,7 @@ members = [
     "ic-kit-runtime",
     "ic-kit-stable",
     "ic-kit-sys",
+    "ic-kit-ws"
 ]
 
 [profile.canister-release]
