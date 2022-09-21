@@ -66,7 +66,7 @@ impl WsConnections {
         for (connection_id, message) in messages {
             self.connections[self.connections.len() - 1]
                 .1
-                .entry(connection.0)
+                .entry(connection_id.0)
                 .or_default()
                 .append(message);
         }
