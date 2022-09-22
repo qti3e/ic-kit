@@ -88,10 +88,9 @@ impl WsConnections {
 
 /// Return an increasing numeric identifier for the current block.
 fn get_current_block_id() -> BlockId {
-    // ic9.time() returns the same value for the entire execution during a single entry point, this
+    // ic0.time() returns the same value for the entire execution during a single entry point, this
     // guarantees that this function is also at least going to return the same value when invoked
     // throughout a single update call.
-    const BLOCK_PERIOD_SECONDS: usize = 3;
     let time_seconds = ic_kit::ic::time() / 1_000_000;
-    (time_seconds / BLOCK_PERIOD_SECONDS) * BLOCK_PERIOD_SECONDS
+    time_seconds
 }

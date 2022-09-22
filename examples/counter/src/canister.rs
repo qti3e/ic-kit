@@ -30,6 +30,13 @@ pub fn increment_by(counter: &mut Counter, n: u8) -> u64 {
     counter.increment_by(n)
 }
 
+#[update]
+pub fn now() -> u64 {
+    let time = ic::time();
+    ic::print(format!("{}", (time - 1663804127529549000) / 1_000_000 / 1_000));
+    time
+}
+
 #[query]
 pub fn get_counter(counter: &Counter) -> u64 {
     counter.number

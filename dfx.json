@@ -14,7 +14,7 @@
     },
     "naming_system": {
       "candid": "examples/naming_system/candid.did",
-      "package": "naming_system",
+      "package": "ic_kit_example_naming_system",
       "type": "rust"
     }
   },
